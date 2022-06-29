@@ -1,2 +1,8 @@
-var dateTime = new Date();
-document.getElementById('date').innerHTML=dateTime;
+// displays current date and time in header
+var datetime = moment().format('LLL');
+$("#local-date").append(datetime);
+
+// for past - present - future time blocks for colored rows
+
+
+
