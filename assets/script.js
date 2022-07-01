@@ -19,8 +19,12 @@ taskText.each(function () {
         // else if statement for row associated hour setting to if greater than current hour then adding the class of future
         } else if (newTask > currentTime) {
             $(this).addClass("future");
-        // else statement    
-        }  else{
+        // else if statement for rows to default to white when not in current business hours
+        } else if((currentTime>= 18) || (currentTime<= 7)) {
+            $(this).addClass("white");
+        } else{
             $(this).addClass("white");
         }
 });
+
+// for saveBtn to save text area on click
